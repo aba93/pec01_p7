@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <title>PEC01_P7 - Álvaro Belmonte</title>
+</head>
+
+<body ng-app="App" >
+    <h1>PEC01_P7 - Álvaro Belmonte</h1>
+    <img src="img/conversor.jpg"/>
+    <form ng-controller="myCtrl as ctrl">
+        <b>Cantidad</b> <br> <input type="number" ng-model="ctrl.valorOrigen" ng-change="ctrl.change()"><br><br>
+        <label> <b>Origen</b> </label><br>
+        <select name="origenSelect" ng-model="ctrl.monedaOrigen" ng-change="ctrl.change()">
+            <option value="euro">Euro (EUR)</option>
+            <option value="dolar">Dólar (USD)</option>
+            <option value="libra">Libra Esterlina</option>
+        </select><br><br>
+        <label> <b>Destino</b> </label><br>
+        <select name="destinoSelect" ng-model="ctrl.monedaDestino" ng-change="ctrl.change()">
+            <option value="euro">Euro (EUR)</option>
+            <option value="dolar">Dólar (USD)</option>
+            <option value="libra">Libra Esterlina</option>
+        </select><br><br>
+        <b>Conversión</b> <br> {{ctrl.valorDestino}}
+    </form>
+</body>
+
+</html>
