@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="js/all.min.js"></script>
@@ -11,8 +13,8 @@
 <body ng-app="App" >
     <h1>PEC01_P7 - Álvaro Belmonte</h1>
     <img src="img/conversor.jpg"/>
-    <form ng-controller="myCtrl as ctrl">
-        <b>Cantidad</b> <br> <input type="number" ng-model="ctrl.valorOrigen" ng-change="ctrl.change()"><br><br>
+    <form class="pure-form" ng-controller="myCtrl as ctrl">
+        <b>Cantidad</b> <br> <input type="number" step="any" ng-model="ctrl.valorOrigen" ng-change="ctrl.change()"><br><br>
         <label> <b>Origen</b> </label><br>
         <select name="origenSelect" ng-model="ctrl.monedaOrigen" ng-change="ctrl.change()">
             <option value="euro">Euro (EUR)</option>
